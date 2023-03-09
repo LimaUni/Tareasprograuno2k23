@@ -166,7 +166,7 @@ void imprimirMatriz1(float matriz1[NUMERO_CANDIDATOS1][NUMERO_ANIOS + 1], char a
 
 //-------------------------------------------------------------------------------------------------------------------------------
 
-    cout << "\t\tPARTIDOS" << endl;
+    cout << "\t\tPARTIDO 1" << endl;
     imprimirMatrizLinea();
 
     cout << setw(8) << "Republicano";
