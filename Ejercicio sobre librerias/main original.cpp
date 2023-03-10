@@ -31,6 +31,7 @@ void imprimirMatrizLinea();
 void imprimirMatriz1(float matriz1[NUMERO_CANDIDATOS1][NUMERO_ANIOS + 1], char partidos[NUMERO_CANDIDATOS1][MAXIMA_LONGITUD_CADENA]); //cambio
 void imprimirMatriz2(float matriz2[NUMERO_CANDIDATOS2][NUMERO_ANIOS + 1], char partidos[NUMERO_CANDIDATOS2][MAXIMA_LONGITUD_CADENA]);//cambio
 void imprimirMatriz3(float matriz3[NUMERO_CANDIDATOS3][NUMERO_ANIOS + 1], char partidos[NUMERO_CANDIDATOS3][MAXIMA_LONGITUD_CADENA]);//cambio
+
 int main()
 {
     srand(getpid());
