@@ -1,0 +1,23 @@
+Ejercicio 6.15 capitulo 6
+(Preguntas con respuestas cortas) Responda a cada una de las siguientes preguntas:
+
+a) ¿Qué significa elegir números “al azar”?
+
+Significa que entre un rango definido (por ejemplo del 1 al 100) se debera escoger solamente 1 dentro de todos esos numeros sin que el sigiente sea el mismo
+
+b) ¿Por qué es la función rand útil para simular juegos al azar?
+
+por que esta funcion lo que hace es darnos numero "seudo aleatorios" y eso lo que significa es que nos da numero aleatorios que ya estan definidos en el proggrama
+
+c) ¿Por qué se debe randomizar un programa mediante srand? ¿Bajo qué circunstancias es aconsejable no 
+randomizar?
+
+La funcion Srand lo que hace es generar numeros aleatorios cada vez que ejecutamos el programa y se puede usar cuando por ejemplo, tenemos que crear contrasenas distintas y no queremos que una sea exactamente igual que otra la cual hayamos creado en el pasado 
+
+d) ¿Por qué a menudo es necesario escalar o desplazar los valores producidos por rand?
+
+por que hya veces en las que esos numeros random coindicen o son iguales
+
+e) ¿Por qué es la simulación computarizada de las situaciones reales una técnica útil?
+
+por que, como bien lo dice la palabra, simula hechos reales que podrian suceder en una infinidad de eventos random y en mas de algun ecsenario este coincidira un poco 
