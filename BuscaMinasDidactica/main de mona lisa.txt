@@ -1,0 +1,118 @@
+//empezamos declarando las liberias que estaremos usando y agregaremos las que hemos creado
+#include <iostream>
+#include <unistd.h>
+//liberia creada
+#include "Juego.h"
+//liberia creada
+#include "Config.h"
+
+//indispensable
+using namespace std;
+
+//vamos a empezar
+int main()
+
+{   //como prime paso empezamos poniendo nuestros valores constantes con su tipo de dato
+    const int FILASTABLERO = 5;
+    const int COLUMNASTABLERO = 5;
+    const int MINASENTABLERO = 3;
+    const bool MODODESARROLLADOR = true;
+    const int VIDASTABLERO = 3;
+    Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR, VIDASTABLERO);
+
+    srand(getpid());
+    int opciones;
+    bool repetir = true;
+    do
+    {   //empezaremos a crear lo que aparecera al inicio de nuestro juego, que seran las indicaciones / intrucciones
+        cout << "                                 _______" << endl;
+        cout << "                           _,,ad8888888888bba,_" << endl;
+        cout << "                        ,ad88888I888888888888888ba," << endl;
+        cout << "                      ,88888888I88888888888888888888a," << endl;
+        cout << "                    ,d888888888I8888888888888888888888b," << endl;
+        cout << "                   d88888PP'''' ''YY88888888888888888888b," << endl;
+        cout << "                 ,d88'__,,--------,,,,.;ZZZY8888888888888," << endl;
+        cout << "                ,8IIl''                ;;l'ZZZIII8888888888," << endl;
+        cout << "               ,I88l;'                  ;lZZZZZ888III8888888," << endl;
+        cout << "             ,II88Zl;.                  ;llZZZZZ888888I888888," << endl;
+        cout << "            ,II888Zl;.                .;;;;;lllZZZ888888I8888b" << endl;
+        cout << "           ,II8888Z;;                 `;;;;;''llZZ8888888I8888," << endl;
+        cout << "           II88888Z;'                        .;lZZZ8888888I888b" << endl;
+        cout << "           II88888Z; _,aaa,      .,aaaaa,__.l;llZZZ88888888I888" << endl;
+        cout << "           II88888IZZZZZZZZZ,  .ZZZZZZZZZZZZZZ;llZZ88888888I888," << endl;
+        cout << "           II88888IZZ<'(@@>Z|  |ZZZ<'(@@>ZZZZ;;llZZ888888888I88I" << endl;
+        cout << "          ,II88888;    ''' ;|  |ZZ;  '''     ;;llZ8888888888I888" << endl;
+        cout << "           II888888l            `;;          .;llZZ8888888888I888," << endl;
+        cout << "          ,II888888Z;           ;;;        .;;llZZZ8888888888I888I" << endl;
+        cout << "          III888888Zl;    ..,   `;;       ,;;lllZZZ88888888888I888" << endl;
+        cout << "          II88888888Z;;...;(_    _)      ,;;;llZZZZ88888888888I888," << endl;
+        cout << "          II88888888Zl;;;;;' `--'Z;.   .,;;;;llZZZZ88888888888I888b" << endl;
+        cout << "          ]I888888888Z;;;;'   ';llllll;..;;;lllZZZZ88888888888I8888," << endl;
+        cout << "          II888888888Zl.;;'Y88bd888P';;,..;lllZZZZZ88888888888I8888I" << endl;
+        cout << "          II8888888888Zl;.; `'PPP';;;,..;lllZZZZZZZ88888888888I88888" << endl;
+        cout << "          II888888888888Zl;;. `;;;l;;;;lllZZZZZZZZW88888888888I88888" << endl;
+        cout << "          `II8888888888888Zl;.    ,;;lllZZZZZZZZWMZ88888888888I88888" << endl;
+        cout << "           II8888888888888888ZbaalllZZZZZZZZZWWMZZZ8888888888I888888," << endl;
+        cout << "           `II88888888888888888b'WWZZZZZWWWMMZZZZZZI888888888I888888b" << endl;
+        cout << "            `II88888888888888888;ZZMMMMMMZZZZZZZZllI888888888I8888888" << endl;
+        cout << "             `II8888888888888888 `;lZZZZZZZZZZZlllll888888888I8888888," << endl;
+        cout << "              II8888888888888888, `;lllZZZZllllll;;.Y88888888I8888888b," << endl;
+        cout << "             ,II8888888888888888b   .;;lllllll;;;.;..88888888I88888888b," << endl;
+        cout << "             II888888888888888PZI;.  .`;;;.;;;..; ...88888888I8888888888," << endl;
+        cout << "             II888888888888PZ;;';;.   ;. .;.  .;. .. Y8888888I88888888888b," << endl;
+        cout << "            ,II888888888PZ;;'                        `8888888I8888888888888b," << endl;
+        cout << "            II888888888'                              888888I8888888888888888b" << endl;
+        cout << "           ,II888888888                              ,888888I88888888888888888" << endl;
+        cout << "          ,d88888888888                              d888888I8888888888ZZZZZZZ" << endl;
+        cout << "       ,ad888888888888I                              8888888I8888ZZZZZZZZZZZZZ" << endl;
+        cout << "     ,d888888888888888'                              888888IZZZZZZZZZZZZZZZZZZ" << endl;
+        cout << "   ,d888888888888P'8P'                               Y888ZZZZZZZZZZZZZZZZZZZZZ" << endl;
+        cout << "  ,8888888888888,  '                                 ,ZZZZZZZZZZZZZZZZZZZZZZZZ" << endl;
+        cout << " d888888888888888,                                ,ZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl;
+        cout << " 888888888888888888a,      _                    ,ZZZZZZZZZZZZZZZZZZZZ888888888" << endl;
+        cout << " 888888888888888888888ba,_d'                  ,ZZZZZZZZZZZZZZZZZ88888888888888" << endl;
+        cout << " 8888888888888888888888888888bbbaaa,,,______,ZZZZZZZZZZZZZZZ888888888888888888" << endl;
+        cout << " 88888888888888888888888888888888888888888ZZZZZZZZZZZZZZZ888888888888888888888" << endl;
+        cout << " 8888888888888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888888888" << endl;
+        cout << " 888888888888888888888888888888888888888ZZZZZZZZZZZZZZ888888888888888888888888" << endl;
+        cout << " 8888888888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888888888888" << endl;
+        cout << " 88888888888888888888888888888888888ZZZZZZZZZZZZZZ8888888888888888888888888888" << endl;
+        cout << " 8888888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888 Normand  88" << endl;
+        cout << " 88888888888888888888888888888888ZZZZZZZZZZZZZZ8888888888888888888 Veilleux 88" << endl;
+        cout << " 8888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888888888888888888" << endl;
+        system("pause");
+        system("cls");
+        cout << "\t\t-------------------"<< endl;
+        cout << "\t\t1. Configuaracion del Juego" << endl;
+        cout << "\t\t2. Iniciar el Juego" << endl;
+        cout << "\t\t3. Salir del Juego" << endl;
+        cout << "\n\t\tIngrese una opcion: ";
+        cin >> opciones;
+
+        //ahora empezaremos a generar nuestras opciones, en este caso son 3 y llamamos a las clases que estan declaradas en "config.h"
+        switch (opciones)
+        {
+            //instruccion 1
+        case 1:
+            {
+                configuracionJuego.menuConfiguracion();
+                break;
+            }
+            //instruccion 2
+        case 2:
+            {   system("cls");
+              	Juego juego(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero());
+                juego.iniciar();
+                system("pause");
+                break;
+
+            }
+            //instruccion 3
+        case 3: repetir = false;
+                break;
+
+        }
+    //cerramos nuestro ciclo
+    } while (repetir);
+    return 0;
+}

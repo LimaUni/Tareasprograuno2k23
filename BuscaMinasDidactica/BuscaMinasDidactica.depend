@@ -1,0 +1,165 @@
+# depslib dependency file v1.0
+1680094554 source:c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\main.cpp
+	<iostream>
+	<unistd.h>
+	"Juego.h"
+	"Config.h"
+
+1679290166 source:c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\juego.cpp
+	"Juego.h"
+
+1679290952 c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\juego.h
+	"Tablero.h"
+
+1679292869 source:c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
+1679325748 c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1679069269 source:c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1679067804 c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\celda.h
+
+1679324984 source:c:\users\visitante\proyectos\didactica2k23\temporal\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\main.cpp
+	<iostream>
+	<unistd.h>
+	"Juego.h"
+
+1679290952 c:\users\visitante\proyectos\didactica2k23\temporal\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\juego.h
+	"Tablero.h"
+
+1679325748 c:\users\visitante\proyectos\didactica2k23\temporal\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1679067804 c:\users\visitante\proyectos\didactica2k23\temporal\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\celda.h
+
+1679069269 source:c:\users\visitante\proyectos\didactica2k23\temporal\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1679290166 source:c:\users\visitante\proyectos\didactica2k23\temporal\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\juego.cpp
+	"Juego.h"
+
+1679292869 source:c:\users\visitante\proyectos\didactica2k23\temporal\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
+1680102584 source:c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\config.cpp
+	<iostream>
+	<unistd.h>
+	"Config.h"
+
+1680102584 c:\users\visitante\proyectos\didactica2k23\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\config.h
+
+1680103279 source:c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\config.cpp
+	<iostream>
+	<unistd.h>
+	"Config.h"
+
+1680103279 c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\config.h
+
+1680103279 source:c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\main.cpp
+	<iostream>
+	<unistd.h>
+	"Juego.h"
+	"Config.h"
+
+1680103279 c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\juego.h
+	"Tablero.h"
+
+1680485159 c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1680277319 c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\include\celda.h
+
+1680103279 source:c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1680103279 source:c:\jemr\prograuno2k23\juegos\buscaminasdidactica\buscaminasdidactica\src\juego.cpp
+	"Juego.h"
+
+1680103280 source:c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\main.cpp
+	<iostream>
+	<unistd.h>
+	"Juego.h"
+	"Config.h"
+
+1680103280 c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\include\juego.h
+	"Tablero.h"
+
+1680485160 c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1680277320 c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\include\celda.h
+
+1680491181 c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\include\config.h
+
+1680103280 source:c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1680103280 source:c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\src\config.cpp
+	<iostream>
+	<unistd.h>
+	"Config.h"
+
+1680103280 source:c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\src\juego.cpp
+	"Juego.h"
+
+1680488270 source:c:\users\erick solares\onedrive\documentos\progra 1\tareasp1-9959-22-5755\busca minas\buscaminasdidactica\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
+1681638541 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\main.cpp
+	<iostream>
+	<unistd.h>
+	"Juego.h"
+	"Config.h"
+
+1680103280 c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\include\juego.h
+	"Tablero.h"
+
+1680485160 c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1680277320 c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\include\celda.h
+
+1681637981 c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\include\config.h
+
+1681637447 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\src\config.cpp
+	<iostream>
+	<unistd.h>
+	"Config.h"
+
+1681637981 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\src\juego.cpp
+	"Juego.h"
+
+1680488270 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
+1681258370 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1681307343 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\buscaminasdidactica\src\login.cpp
+
