@@ -82,7 +82,7 @@ string Tablero::getRepresentacionMina(int coordenadaX, int coordenadaY)
     else
     {
         //da un signo de interrogación porque la celda no ha sido descubierta.
-        return "?";
+        return " ";
         //return ".";
     }
 }
