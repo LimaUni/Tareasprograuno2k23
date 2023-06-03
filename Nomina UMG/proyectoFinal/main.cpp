@@ -1,5 +1,6 @@
 #include "usuario.h"
 #include "bitacora.h"
+#include "departamentos.h"
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>

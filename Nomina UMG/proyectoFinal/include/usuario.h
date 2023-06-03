@@ -3,6 +3,7 @@
 
 #include "usuario.h"
 #include "bitacora.h"
+#include "departamentos.h"
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
@@ -12,6 +13,7 @@
 #include <string>
 #include <vector>
 #include <chrono>
+
 #define ENTER 13
 #define BACKSPACE 8
 #define INTENTOS 3
@@ -20,11 +22,13 @@ using namespace std;
 class usuario
 {
 	private:
-		string IDAdministrador,nameAdministrador,passwordAdministrador;
+		string passwordAdministrador;
 		string ID,name,password, departamento;
+		string codigo;
 		int telefono, salario,cantidadHoras, valorHoras, totalHoras;
 		double IGSS, IRTRA, salarioNeto, adelantos;
 	public:
+	    string nameAdministrador;
 		void menuAdministrador();
 		void insertarAdministrador();
 		void desplegarAdministrador();
@@ -36,9 +40,6 @@ class usuario
 		void buscarTrabajador();
 		void borrarTrabajador();
 		void desplegarAplicaciones();
-		void desplegarAdministracion();
-        void desplegarVentas();
-		void menuDepartamentos();
 };
 
 #endif // USUARIO_H

@@ -1,5 +1,6 @@
 #include "usuario.h"
 #include "bitacora.h"
+#include "departamentos.h"
 
 #include <iostream>
 #include <fstream>
@@ -15,8 +16,9 @@
 #define INTENTOS 3
 
 using namespace std;
-string codigo;
 bitacora bit;
+departamentos menuDepartamentos;
+
 void usuario::menuAdministrador()
 {
     int Opciones;
@@ -90,12 +92,6 @@ void usuario::insertarAdministrador()
 
     vector<string> usuarios;
     vector<string> claves;
-    vector<string> IDs;
-
-    IDs.push_back("10");
-    IDs.push_back("20");
-    IDs.push_back("30");
-    IDs.push_back("40");
 
     usuarios.push_back("Kesdy");
     usuarios.push_back("Erick");
@@ -180,12 +176,11 @@ void usuario::insertarAdministrador()
         bitacora bit;
         bit.ingreso(nameAdministrador,codigo);
     }
-
     else
+    {
     codigo="7001";
     bitacora bit2;
     bit2.ingreso(nameAdministrador,codigo);
-    {
     int Opciones;
 	char x;
 	do
@@ -293,8 +288,11 @@ void usuario::insertarAdministrador()
             system("pause");
             break;
         case 4:
-            menuDepartamentos();
+            {
+            departamentos menudepas;
+            menudepas.menuDepartamentos();
             bit.ingreso(nameAdministrador,"7500");
+            }
             break;
         case 5:
             system("cls");
@@ -321,7 +319,7 @@ void usuario::insertarAdministrador()
         cout << "          |___|                                     |___|"<< endl;
         cout << "         (_____)-----------------------------------(_____)"<< endl;
 		exit(0);
-	default:
+        default:
 		cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 	}
 	getch();
@@ -457,7 +455,7 @@ void usuario::menuTrabajador()
         cout << "          |___|    Redireccionando al inicio....    |___|"<< endl;
         cout << "          |___|                                     |___|"<< endl;
         cout << "         (_____)-----------------------------------(_____)"<< endl;
-                break;
+        break;
 	case 7:
 	    system("cls");
 	    bitacora bit;
@@ -500,7 +498,7 @@ void usuario::insertarTrabajador()
 	cin >> password;
 	cout << "\t\t  Ingresa el numero de telefono del trabajador : ";
 	cin >> telefono;
-	cout << "\t\t  Ingrese departamento V/A(ventas o administracion): ";
+	cout << "\t\t  Ingrese departamento V/A/C/R(Ventas, Administracion, Contabilidad, Recepcion): ";
 	cin >> departamento;
 	cout << "\t\t  Ingresa El salario del trabajador : Q";
 	cin >> salario;
@@ -515,7 +513,7 @@ void usuario::insertarTrabajador()
     cout << "=============================================" <<endl;
     cout << "||     Listo! nuevo trabajador agregado    ||" <<endl;
     cout << "=============================================" <<endl;
-    IGSS = (salario+totalHoras)*(0.1067);
+    IGSS = (salario+totalHoras)*(0.0483);
     IRTRA = (salario+totalHoras)*(0.01);
     salarioNeto=(salario+totalHoras)-(IGSS+IRTRA);
 	if (departamento=="V")
@@ -532,6 +530,26 @@ void usuario::insertarTrabajador()
     {
         departamento="Admin";
         file.open("Administracion.txt", ios::app | ios::out);
+        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< departamento << std::left << std::setw(15)  << salario << std::left << std::setw(15) << cantidadHoras << std::setw << std::setw(15) << IGSS << std::left << std::setw(15) << IRTRA << std::left << std::setw(15) << salarioNeto << std::setw << std::setw(15) << adelantos << "\n";
+        bitacora bit;
+        codigo="7301";
+        bit.ingreso(nameAdministrador,codigo);
+        file.close();
+    }
+    if (departamento=="C")
+    {
+        departamento="Conta";
+        file.open("Contabilidad.txt", ios::app | ios::out);
+        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< departamento << std::left << std::setw(15)  << salario << std::left << std::setw(15) << cantidadHoras << std::setw << std::setw(15) << IGSS << std::left << std::setw(15) << IRTRA << std::left << std::setw(15) << salarioNeto << std::setw << std::setw(15) << adelantos << "\n";
+        bitacora bit;
+        codigo="7301";
+        bit.ingreso(nameAdministrador,codigo);
+        file.close();
+    }
+    if (departamento=="R")
+    {
+        departamento="Recep";
+        file.open("Recepcion.txt", ios::app | ios::out);
         file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< departamento << std::left << std::setw(15)  << salario << std::left << std::setw(15) << cantidadHoras << std::setw << std::setw(15) << IGSS << std::left << std::setw(15) << IRTRA << std::left << std::setw(15) << salarioNeto << std::setw << std::setw(15) << adelantos << "\n";
         bitacora bit;
         codigo="7301";
@@ -743,144 +761,4 @@ void usuario::borrarTrabajador()
         codigo="7304";
         bit.ingreso(nameAdministrador,codigo);
 	}
-}
-void usuario::desplegarAdministracion()
-{
-	system("cls");
-	fstream file;
-	string ver;
-	int total = 0;
-    cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
-    cout << "" << endl;
-	cout << "                                               __^__                                     __^__"<< endl;
-    cout << "                                              ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "                                               | / |                                     | / |"<< endl;
-    cout << "                                               | / |   Tabla de Detalles de Trabajador   | / |"<< endl;
-    cout << "                                               |___|     Departamento Administrativo     |___|"<< endl;
-    cout << "                                               |___|                                     |___|"<< endl;
-    cout << "                                              (_____)-----------------------------------(_____)"<< endl;
-    cout << "===============================================================================================================================================================" << endl;
-    cout << "ID             NOMBRE       PASSWORD         PUESTO         TELEFONO      SALARIO     HORAS EXTRAS       IGSS           IRTRA        SALARIO NETO    ADELANTOS " << endl;
-    cout << "===============================================================================================================================================================" << endl;
-	file.open("Administracion.txt",ios::in);
-	if(!file)
-	{
-		cout << "\n\t\t\tNo hay informacion...";
-		file.close();
-	}
-	else
-	{
-		while(!file.eof())
-		{
-			total++;
-			getline(file,ver);
-            cout << ver << endl;
-		}
-		if(total == 0)
-		{
-			cout<<"\n\t\t\tNo hay informacion...";
-		}
-	}
-	file.close();
-    bitacora bit;
-	codigo="7501";
-	bit.ingreso(nameAdministrador,codigo);
-}
-void usuario::desplegarVentas()
-{
-	system("cls");
-	fstream file;
-	string ver;
-	int total = 0;
-    cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
-    cout << "" << endl;
-	cout << "                                               __^__                                     __^__"<< endl;
-    cout << "                                              ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "                                               | / |                                     | / |"<< endl;
-    cout << "                                               | / |   Tabla de Detalles de Trabajador   | / |"<< endl;
-    cout << "                                               |___|        Departamento de Ventas       |___|"<< endl;
-    cout << "                                               |___|                                     |___|"<< endl;
-    cout << "                                              (_____)-----------------------------------(_____)"<< endl;
-    cout << "===============================================================================================================================================================" << endl;
-    cout << "ID             NOMBRE       PASSWORD         PUESTO         TELEFONO      SALARIO     HORAS EXTRAS       IGSS           IRTRA        SALARIO NETO    ADELANTOS " << endl;
-    cout << "===============================================================================================================================================================" << endl;
-	file.open("Ventas.txt",ios::in);
-	if(!file)
-	{
-		cout << "\n\t\t\tNo hay informacion...";
-		file.close();
-	}
-	else
-	{
-		while(!file.eof())
-		{
-			total++;
-			getline(file,ver);
-            cout << ver << endl;
-		}
-		if(total == 0)
-		{
-			cout<<"\n\t\t\tNo hay informacion...";
-		}
-	}
-	file.close();
-    bitacora bit;
-	codigo="7502";
-	bit.ingreso(nameAdministrador,codigo);
-}
-void usuario::menuDepartamentos()
-{
-    int Opciones;
-    do
-    {
-    system("cls");
-    cout << "" << endl;
-    cout << "\t\t   Nombre Administrador: " << nameAdministrador << endl;
-    cout << "          __^__                                     __^__"<< endl;
-    cout << "         ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "          | / |                                     | / |"<< endl;
-    cout << "          | / |            MENU DEPARTAMENTOS       | / |"<< endl;
-    cout << "          |___|                                     |___|"<< endl;
-    cout << "         (_____)-----------------------------------(_____)"<< endl;
-    cout << "\        -------------------------------------------------"<< endl;
-    cout << "                 *===============================*"<< endl;
-    cout << "                 |   Porfavor, elije una opcion  |"<< endl;
-    cout << "                 |                               |"<< endl;
-    cout << "                 | 1. Administracion             |"<< endl;
-    cout << "                 | 2. Ventas                     |"<< endl;
-    cout << "                 | 3. Salir del sistema          |"<< endl;
-    cout << "                 |                               |"<< endl;
-    cout << "                 |      Ingresa una Opcion       |"<< endl;
-    cout << "                 |                               |"<< endl;
-    cout << "                 *===============================*"<< endl;
-    cin >> Opciones;
-
-        switch(Opciones)
-        {
-        case 1:
-            desplegarAdministracion();
-            break;
-        case 2:
-            desplegarVentas();
-            break;
-        case 3:
-            system("cls");
-            bitacora bit;
-            codigo="7999";
-            bit.ingreso(nameAdministrador,codigo);
-            cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
-            cout << "" << endl;
-            cout << "          __^__                                     __^__"<< endl;
-            cout << "         ( ___ )-----------------------------------( ___ )"<< endl;
-            cout << "          | / |                                     | / |"<< endl;
-            cout << "          | / |     Muchas gracias por ingresar     | / |"<< endl;
-            cout << "          |___|            vuelva pronto            |___|"<< endl;
-            cout << "          |___|                                     |___|"<< endl;
-            cout << "         (_____)-----------------------------------(_____)"<< endl;
-            exit(0);
-	default:
-		cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
-	}
-	getch();
-    }while(Opciones!= 3);
 }

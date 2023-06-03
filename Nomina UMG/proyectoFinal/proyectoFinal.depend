@@ -401,7 +401,73 @@
 	<vector>
 	<chrono>
 
-1685346084 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\nomina umg\proyectofinal\main.cpp
+1685760261 source:c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\main.cpp
+	"usuario.h"
+	"bitacora.h"
+	"departamentos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685764060 c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\include\usuario.h
+	"usuario.h"
+	"bitacora.h"
+	"departamentos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685761023 c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\include\bitacora.h
+	"usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685720798 source:c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685764118 source:c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\src\usuario.cpp
+	"usuario.h"
+	"bitacora.h"
+	"departamentos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685764060 c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\include\departamentos.h
 	"usuario.h"
 	"bitacora.h"
 	<iostream>
@@ -414,7 +480,8 @@
 	<vector>
 	<chrono>
 
-1685414790 c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\nomina umg\proyectofinal\include\usuario.h
+1685764680 source:c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\src\departamentos.cpp
+	"departamentos.h"
 	"usuario.h"
 	"bitacora.h"
 	<iostream>
@@ -427,7 +494,35 @@
 	<vector>
 	<chrono>
 
-1685348260 c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\nomina umg\proyectofinal\include\bitacora.h
+1685760261 source:c:\users\lima\desktop\proyectofinal\main.cpp
+	"usuario.h"
+	"bitacora.h"
+	"departamentos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685767720 c:\users\lima\desktop\proyectofinal\include\usuario.h
+	"usuario.h"
+	"bitacora.h"
+	"departamentos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685761023 c:\users\lima\desktop\proyectofinal\include\bitacora.h
 	"usuario.h"
 	<iostream>
 	<fstream>
@@ -439,7 +534,8 @@
 	<vector>
 	<chrono>
 
-1685594617 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\nomina umg\proyectofinal\src\bitacora.cpp
+1685768297 c:\users\lima\desktop\proyectofinal\include\departamentos.h
+	"usuario.h"
 	"bitacora.h"
 	<iostream>
 	<fstream>
@@ -451,9 +547,36 @@
 	<vector>
 	<chrono>
 
-1685595757 source:c:\users\lima\desktop\progra1\proyectos\tareasprograuno2k23\nomina umg\proyectofinal\src\usuario.cpp
+1685720798 source:c:\users\lima\desktop\proyectofinal\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685767170 source:c:\users\lima\desktop\proyectofinal\src\departamentos.cpp
+	"departamentos.h"
 	"usuario.h"
 	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685764118 source:c:\users\lima\desktop\proyectofinal\src\usuario.cpp
+	"usuario.h"
+	"bitacora.h"
+	"departamentos.h"
 	<iostream>
 	<fstream>
 	<stdlib.h>
