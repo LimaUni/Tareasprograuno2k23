@@ -501,7 +501,7 @@ void usuario::insertarTrabajador()
     {
         enfermedad="Cabeza";
         file.open("Cabeza.txt", ios::app | ios::out);
-        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
+        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << "\n";
         bitacora bit;
         codigo="7301";
         bit.ingreso(nameAdministrador,codigo);
@@ -511,7 +511,7 @@ void usuario::insertarTrabajador()
     {
         enfermedad="Estomago";
         file.open("Estomago.txt", ios::app | ios::out);
-        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
+        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << "\n";
         bitacora bit;
         codigo="7301";
         bit.ingreso(nameAdministrador,codigo);
@@ -521,7 +521,7 @@ void usuario::insertarTrabajador()
     {
         enfermedad="Garganta";
         file.open("Garganta.txt", ios::app | ios::out);
-        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
+        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << "\n";
         bitacora bit;
         codigo="7301";
         bit.ingreso(nameAdministrador,codigo);
@@ -531,7 +531,7 @@ void usuario::insertarTrabajador()
     {
         enfermedad="Fiebre";
         file.open("Fiebre.txt", ios::app | ios::out);
-        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
+        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << "\n";
         bitacora bit;
         codigo="7301";
         bit.ingreso(nameAdministrador,codigo);
@@ -560,7 +560,7 @@ void usuario::desplegarTrabajador()
     cout << "                     |___|                                     |___|"<< endl;
     cout << "                    (_____)-----------------------------------(_____)"<< endl;
     cout << "===============================================================================================" << endl;
-    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
+    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         DOLOR/MALESTAR       " << endl;
     cout << "===============================================================================================" << endl;
 	file.open("Usuarios.txt",ios::in);
 	if(!file)
@@ -675,7 +675,7 @@ void usuario::buscarTrabajador()
                 cout << "                                              "<< endl;
                 cout << "                   ID Trabajador: "<< ID << endl;
                 cout << "                   Nombre Trabajador : "<< name << endl;
-                cout << "                   Apellido Trabajador : "<< name << endl;
+                cout << "                   Apellido Trabajador : "<< apellido << endl;
                 cout << "                   DPI de Paciente : "<< dpi << endl;
                 cout << "                   Enfermedad del paciente"<< enfermedad << endl;
                 cout << "                   Telefono: "<< telefono << endl;
@@ -749,16 +749,19 @@ void usuario::desplegarAdministracion()
 	int total = 0;
     cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
     cout << "" << endl;
-	cout << "     __^__                                     __^__"<< endl;
-    cout << "    ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "     | / |                                     | / |"<< endl;
-    cout << "     | / |    Tabla de Detalles de Pacientes   | / |"<< endl;
-    cout << "     |___|            Dolor de Cabeza          |___|"<< endl;
-    cout << "     |___|                                     |___|"<< endl;
-    cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "===============================================================================================" << endl;
-    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
-    cout << "===============================================================================================" << endl;
+	cout << "             __^__                                     __^__            "<< endl;
+    cout << "            ( ___ )-----------------------------------( ___ )           "<< endl;
+    cout << "             | / |                                     | / |            "<< endl;
+    cout << "             | / |    Tabla de Detalles de Pacientes   | / |            "<< endl;
+    cout << "             |___|            Dolor de Cabeza          |___|            "<< endl;
+    cout << "             |___|                                     |___|            "<< endl;
+    cout << "            (_____)-----------------------------------(_____)           "<< endl;
+    cout << "========================================================================" << endl;
+    cout << "      RECETA: aspirina o ibuprofeno de 600GM - dosis cada 8 horas       " << endl;
+    cout << "          Si el dolor sigue o aumenta, por favor ir a un medico         " << endl;
+    cout << "========================================================================" << endl;
+    cout << "ID             NOMBRE        APELLIDO        DPI       TELEFONO         " << endl;
+    cout << "========================================================================" << endl;
 	file.open("Cabeza.txt",ios::in);
 	if(!file)
 	{
@@ -791,16 +794,19 @@ void usuario::desplegarVentas()
 	int total = 0;
     cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
     cout << "" << endl;
-    cout << "     __^__                                     __^__"<< endl;
-    cout << "    ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "     | / |                                     | / |"<< endl;
-    cout << "     | / |    Tabla de Detalles de Pacientes   | / |"<< endl;
-    cout << "     |___|           Dolor de Garganta         |___|"<< endl;
-    cout << "     |___|                                     |___|"<< endl;
-    cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "===============================================================================================" << endl;
-    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
-    cout << "===============================================================================================" << endl;
+    cout << "             __^__                                     __^__            "<< endl;
+    cout << "            ( ___ )-----------------------------------( ___ )           "<< endl;
+    cout << "             | / |                                     | / |            "<< endl;
+    cout << "             | / |    Tabla de Detalles de Pacientes   | / |            "<< endl;
+    cout << "             |___|            Dolor de Garganta        |___|            "<< endl;
+    cout << "             |___|                                     |___|            "<< endl;
+    cout << "            (_____)-----------------------------------(_____)           "<< endl;
+    cout << "========================================================================" << endl;
+    cout << "        RECETA: Guaifenesina, pastillas con mentol/miel o vicks         " << endl;
+    cout << "   Posible infeccion, inicios de fiebre o cambio de voz (en infantes)   " << endl;
+    cout << "========================================================================" << endl;
+    cout << "ID             NOMBRE        APELLIDO        DPI       TELEFONO         " << endl;
+    cout << "========================================================================" << endl;
 	file.open("Garganta.txt",ios::in);
 	if(!file)
 	{
@@ -833,16 +839,19 @@ void usuario::desplegarContabilidad()
 	int total = 0;
     cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
     cout << "" << endl;
-    cout << "     __^__                                     __^__"<< endl;
-    cout << "    ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "     | / |                                     | / |"<< endl;
-    cout << "     | / |    Tabla de Detalles de Pacientes   | / |"<< endl;
-    cout << "     |___|           Dolor de Estomago         |___|"<< endl;
-    cout << "     |___|                                     |___|"<< endl;
-    cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "===============================================================================================" << endl;
-    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
-    cout << "===============================================================================================" << endl;
+    cout << "             __^__                                     __^__            "<< endl;
+    cout << "            ( ___ )-----------------------------------( ___ )           "<< endl;
+    cout << "             | / |                                     | / |            "<< endl;
+    cout << "             | / |    Tabla de Detalles de Pacientes   | / |            "<< endl;
+    cout << "             |___|            Dolor de Estomago        |___|            "<< endl;
+    cout << "             |___|                                     |___|            "<< endl;
+    cout << "            (_____)-----------------------------------(_____)           "<< endl;
+    cout << "============================================================================" << endl;
+    cout << " RECETA: Antidiarreicos , Líquidos rehidratantes o una sertal cada 12 horas " << endl;
+    cout << "       Posible indigestion, inicios de empacho, gastritis o reflujo         " << endl;
+    cout << "============================================================================" << endl;
+    cout << "ID             NOMBRE        APELLIDO        DPI       TELEFONO         " << endl;
+    cout << "=============================================================================" << endl;
 	file.open("Estomago.txt",ios::in);
 	if(!file)
 	{
@@ -875,16 +884,19 @@ void usuario::desplegarRecepcion()
 	int total = 0;
     cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
     cout << "" << endl;
-    cout << "     __^__                                     __^__"<< endl;
-    cout << "    ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "     | / |                                     | / |"<< endl;
-    cout << "     | / |    Tabla de Detalles de Pacientes   | / |"<< endl;
-    cout << "     |___|              Fiebre leve            |___|"<< endl;
-    cout << "     |___|                                     |___|"<< endl;
-    cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "===============================================================================================" << endl;
-    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
-    cout << "===============================================================================================" << endl;
+    cout << "             __^__                                     __^__            "<< endl;
+    cout << "            ( ___ )-----------------------------------( ___ )           "<< endl;
+    cout << "             | / |                                     | / |            "<< endl;
+    cout << "             | / |    Tabla de Detalles de Pacientes   | / |            "<< endl;
+    cout << "             |___|              Fiebre leve            |___|            "<< endl;
+    cout << "             |___|                                     |___|            "<< endl;
+    cout << "            (_____)-----------------------------------(_____)           "<< endl;
+    cout << "========================================================================" << endl;
+    cout << "   RECETA: Ibuprofeno de 6 a 8 horas y paracetamol en el mismo horario  " << endl;
+    cout << " Posible infeccion, inicios de resfriado, estres o mucho tiempo sin luz " << endl;
+    cout << "========================================================================" << endl;
+    cout << "ID             NOMBRE        APELLIDO        DPI       TELEFONO         " << endl;
+    cout << "========================================================================" << endl;
 	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
@@ -927,10 +939,10 @@ void usuario::menuDepartamentos()
     cout << "                 *===============================*"<< endl;
     cout << "                 |   Porfavor, elije una opcion  |"<< endl;
     cout << "                 |                               |"<< endl;
-    cout << "                 | 1. Cabeza                     |"<< endl;
-    cout << "                 | 2. Garganta                   |"<< endl;
-    cout << "                 | 3. Estomago                   |"<< endl;
-    cout << "                 | 4. Fiebre                     |"<< endl;
+    cout << "                 | 1. Dolor de Cabeza            |"<< endl;
+    cout << "                 | 2. Dolor de Garganta          |"<< endl;
+    cout << "                 | 3. Dolor deEstomago           |"<< endl;
+    cout << "                 | 4. Fiebre Leve                |"<< endl;
     cout << "                 | 5. Salir del sistema          |"<< endl;
     cout << "                 |                               |"<< endl;
     cout << "                 |      Ingresa una Opcion       |"<< endl;
