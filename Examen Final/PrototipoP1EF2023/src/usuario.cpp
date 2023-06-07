@@ -226,12 +226,11 @@ void usuario::insertarAdministrador()
     do
     {
         system("cls");
-    cout << "" << endl;
     cout << "\t\t    Nombre Administrador: " << nameAdministrador << endl;
     cout << "          __^__                                     __^__"<< endl;
     cout << "         ( ___ )-----------------------------------( ___ )"<< endl;
     cout << "          | / |                                     | / |"<< endl;
-    cout << "          | / |            MENU DE INFORME          | / |"<< endl;
+    cout << "          | / |           MENU DE PACIENTES         | / |"<< endl;
     cout << "          |___|                                     |___|"<< endl;
     cout << "         (_____)-----------------------------------(_____)"<< endl;
     cout << "\        -------------------------------------------------"<< endl;
@@ -344,7 +343,10 @@ void usuario::insertarAdministrador()
         codigo="7999";
         bit.ingreso(nameAdministrador,codigo);
 	default:
-		cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+	    cout << "=====================================================" << endl;
+        cout << "||  Opcion invalida...Por favor prueba otra vez     ||" << endl;
+        cout << "=====================================================" << endl;
+        cin.get();
 	}
 	getch();
     }while(Opciones!= 3);
@@ -357,6 +359,23 @@ void usuario::menuTrabajador()
 	char x;
 	do
     {
+    system("cls");
+    cout << "  CCCCC    L      IIIII  N     N  IIIII  CCCCC      A     " << endl;
+    cout << " C         L        I    NN    N    I   C          A A    " << endl;
+    cout << "C          L        I    N N   N    I  C          AAAAA   " << endl;
+    cout << " C         L        I    N  N  N    I   C        A     A  " << endl;
+    cout << "  CCCCC    LLLLL  IIIII  N    NN  IIIII  CCCCC  A       A " << endl;
+    cout << " "<< endl;
+    cout << "    UUUU   UUUU   MMMM     MMM   GGGGGG   " << endl;
+    cout << "    UUUU   UUUU   MMMMM   MMMM  GGGGGGGG  " << endl;
+    cout << "    UUUU   UUUU   MMMMMM MMMMM GGG        " << endl;
+    cout << "    UUUU   UUUU   MMM MMMM MMM GGG   GGGGG " << endl;
+    cout << "    UUUU   UUUU   MMM  MM  MMM GGG    GGGG  " << endl;
+    cout << "    UUUU   UUUU   MMM      MMM  GGGGGGGGG   " << endl;
+    cout << "    UUUUUUUUUUU   MMM      MMM   GGGGGGG  " << endl;
+    cout << "     UUUUUUUUU    MMM      MMM    GGGGG   " << endl;
+    cout << "" << endl;
+    system("pause");
     system("cls");
 	bitacora bit;
 	codigo="7300";
@@ -519,7 +538,7 @@ void usuario::insertarTrabajador()
         file.close();
     }
     file.open("Usuarios.txt", ios::app | ios::out);
-    file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
+        file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
 	bitacora bit;
 	codigo="7301";
 	bit.ingreso(nameAdministrador,codigo);
@@ -601,11 +620,13 @@ void usuario::modificarTrabajador()
 				cin >> name;
 				cout << "\t\t\tIngrese Contrasena Persona: ";
 				cin >> dpi;
+				cout << "\t\t\tIngrese Apellido Persona: ";
+				cin >> apellido;
 				cout << "\t\t\tIngrese Telefono Persona: ";
 				cin >> telefono;
 				cout << "\t\t\tIngrese Departamento Persona: ";
 				cin >> enfermedad;
-                file1 << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
+                file1 << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
 				found++;
 			}
 			        file >> ID >> name >> apellido >> dpi >> telefono >> enfermedad ;
@@ -645,7 +666,7 @@ void usuario::buscarTrabajador()
         cout << "         (_____)------------------------------------(_____)"<< endl;
 		cout << "\nIngrese ID de la Persona que quiere buscar: ";
 		cin >> user_ID;
-		file >> ID >> name >> dpi >> telefono >> enfermedad ;
+		file >> ID >> name >> dpi >> apellido>> telefono >> enfermedad ;
 		while(!file.eof())
 		{
 			if(user_ID == ID)
@@ -654,6 +675,7 @@ void usuario::buscarTrabajador()
                 cout << "                                              "<< endl;
                 cout << "                   ID Trabajador: "<< ID << endl;
                 cout << "                   Nombre Trabajador : "<< name << endl;
+                cout << "                   Apellido Trabajador : "<< name << endl;
                 cout << "                   DPI de Paciente : "<< dpi << endl;
                 cout << "                   Enfermedad del paciente"<< enfermedad << endl;
                 cout << "                   Telefono: "<< telefono << endl;
@@ -661,7 +683,7 @@ void usuario::buscarTrabajador()
                 cout << "                 *============================* "<< endl;
 				found++;
 			}
-			file >> ID >> name >> dpi >> telefono >> enfermedad ;
+			file >> ID >> name >> dpi >> apellido >> telefono >> enfermedad ;
 		}
 		if(found == 0)
 		{
@@ -692,19 +714,19 @@ void usuario::borrarTrabajador()
 		cout << "\n Ingrese el ID del Paciente que quiere borrar: ";
 		cin >> user_ID;
 		file1.open("Record.txt",ios::app | ios::out);
-        file >> ID >> name >> dpi >> telefono >> enfermedad ;
+        file >> ID >> name >> dpi >> apellido >> telefono >> enfermedad ;
 		while(!file.eof())
 		{
 			if(user_ID!=ID)
 			{
-                file1 << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
+                file1 << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << apellido << std::left << std::setw(15) << dpi << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< enfermedad << "\n";
 			}
 			else
 			{
 				found++;
 				cout << "\n\t\t\tBorrado de informacion exitoso";
 			}
-        file >> ID >> name >> dpi >> telefono >> enfermedad ;
+        file >> ID >> name >> dpi >> apellido >> telefono >> enfermedad ;
 		}
 		if(found == 0)
 		{
@@ -734,9 +756,9 @@ void usuario::desplegarAdministracion()
     cout << "     |___|            Dolor de Cabeza          |___|"<< endl;
     cout << "     |___|                                     |___|"<< endl;
     cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "====================================================" << endl;
-    cout << "ID             NOMBRE       DPI         TELEFONO    " << endl;
-    cout << "====================================================" << endl;
+    cout << "===============================================================================================" << endl;
+    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
+    cout << "===============================================================================================" << endl;
 	file.open("Cabeza.txt",ios::in);
 	if(!file)
 	{
@@ -776,9 +798,9 @@ void usuario::desplegarVentas()
     cout << "     |___|           Dolor de Garganta         |___|"<< endl;
     cout << "     |___|                                     |___|"<< endl;
     cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "====================================================" << endl;
-    cout << "ID             NOMBRE       DPI         TELEFONO    " << endl;
-    cout << "====================================================" << endl;
+    cout << "===============================================================================================" << endl;
+    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
+    cout << "===============================================================================================" << endl;
 	file.open("Garganta.txt",ios::in);
 	if(!file)
 	{
@@ -818,9 +840,9 @@ void usuario::desplegarContabilidad()
     cout << "     |___|           Dolor de Estomago         |___|"<< endl;
     cout << "     |___|                                     |___|"<< endl;
     cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "====================================================" << endl;
-    cout << "ID             NOMBRE       DPI         TELEFONO    " << endl;
-    cout << "====================================================" << endl;
+    cout << "===============================================================================================" << endl;
+    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
+    cout << "===============================================================================================" << endl;
 	file.open("Estomago.txt",ios::in);
 	if(!file)
 	{
@@ -860,9 +882,9 @@ void usuario::desplegarRecepcion()
     cout << "     |___|              Fiebre leve            |___|"<< endl;
     cout << "     |___|                                     |___|"<< endl;
     cout << "    (_____)-----------------------------------(_____)"<< endl;
-    cout << "====================================================" << endl;
-    cout << "ID             NOMBRE       DPI         TELEFONO    " << endl;
-    cout << "====================================================" << endl;
+    cout << "===============================================================================================" << endl;
+    cout << "ID             NOMBRE          APELLIDO          DPI         TELEFONO         ENFERMEDAD       " << endl;
+    cout << "===============================================================================================" << endl;
 	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
