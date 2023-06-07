@@ -1,0 +1,107 @@
+commit 674903586b1ad75df11fcc748c1815094061e682
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Fri Jun 2 23:50:18 2023 -0600
+
+    Actualizacion de datos de nomina
+
+commit 3020907ddf0eab34bfe9cd8b33001fa2ebfb8423
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Fri Jun 2 23:39:29 2023 -0600
+
+    Implementacion del proyecto robot
+
+commit ae0b074c05f09a5e5e135cdadee6ba40ee4abd8e
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Fri Jun 2 09:46:38 2023 -0600
+
+    implementacion del proyecto final
+
+commit 33f542e121bb568bc05caad026592a2b868ba6b7
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Apr 19 11:52:26 2023 -0600
+
+    coreccion de errores
+
+commit 462f6d98c314b9293427a12df105daf658167bfc
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Apr 19 11:46:28 2023 -0600
+
+    actualizacion del examen parcial 2 e ingreso de ejemplos
+
+commit 53967c96a9ee1e1d8ea48fb62131566bbd63f055
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Sun Apr 16 11:21:56 2023 -0600
+
+    Implementacion del juego BuscaMinas
+
+commit b635100b3aadeef7d9a29f51f711fe9d756c6877
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Mon Mar 27 23:56:39 2023 -0600
+
+    tarea capitulo 6
+
+commit 3a5da8bd0ebd8fa6265666d319ab94c80916991e
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Mar 22 11:28:24 2023 -0600
+
+    Actualizacion sobre numeros Finobacci
+
+commit ebd4fcc177d10ce73a7f5efbb1f6f4c53681c9de
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Mon Mar 13 16:08:56 2023 -0600
+
+    Actualizacion de modificaciones
+
+commit cb123329170455d4120adcb87c89372b6324af68
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Thu Mar 9 21:28:14 2023 -0600
+
+    tareas sobre las librerias
+
+commit a1a9fe419434e745a1151c3b4a24a9bf6a353a16
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Thu Mar 9 15:48:21 2023 -0600
+
+    actualizacion de repo
+
+commit 99b03fc66aa6a2346468712fc8ab7731d1967c6d
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Mar 1 11:04:50 2023 -0600
+
+    actualizacion del examen
+
+commit 968db4309ca9d29829dde87e8266a0c4fe30e76c
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Mar 1 10:18:44 2023 -0600
+
+    examen parcial 1
+
+commit d0ae45d333205ac5bf306185cc088b307c730527
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Feb 8 10:24:10 2023 -0600
+
+    creacion de la carpeta laboratorio
+
+commit d1cc52f6557255a76938442321ffb84d841aef1f
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Feb 8 08:23:25 2023 -0600
+
+    actualizacion de la calculadora con funciones extras
+
+commit a0c64ed029efc5afdd6e208c76a5ed8f5bc83da6
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Sat Feb 4 23:41:02 2023 -0600
+
+    Actualizacion de tarea sobre calculadora
+
+commit c345734414bdecc0e2391c23f4321680f09788a9
+Author: Javier Lima <josemarvin508@gmail.com>
+Date:   Wed Jan 25 10:17:00 2023 -0600
+
+    cambios iniciales
+
+commit c73bd78f150174aa4b3abf9d026f44003bd5ef84
+Author: LimaUni <123000307+LimaUni@users.noreply.github.com>
+Date:   Wed Jan 25 09:10:59 2023 -0600
+
+    Initial commit
