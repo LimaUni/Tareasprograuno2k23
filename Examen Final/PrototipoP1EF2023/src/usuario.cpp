@@ -208,7 +208,7 @@ void usuario::insertarAdministrador()
     cout << "                 |   Porfavor, elije una opcion  |"<< endl;
     cout << "                 |                               |"<< endl;
     cout << "                 | 1. Ingreso al recetario       |"<< endl;
-    cout << "                 | 2. pacientes                  |"<< endl;
+    cout << "                 | 2. Informes                   |"<< endl;
     cout << "                 | 3. Cerrar Sesion              |"<< endl;
     cout << "                 | 4. Salir del sistema          |"<< endl;
     cout << "                 |                               |"<< endl;
@@ -230,7 +230,7 @@ void usuario::insertarAdministrador()
     cout << "          __^__                                     __^__"<< endl;
     cout << "         ( ___ )-----------------------------------( ___ )"<< endl;
     cout << "          | / |                                     | / |"<< endl;
-    cout << "          | / |           MENU DE PACIENTES         | / |"<< endl;
+    cout << "          | / |                INFORMES             | / |"<< endl;
     cout << "          |___|                                     |___|"<< endl;
     cout << "         (_____)-----------------------------------(_____)"<< endl;
     cout << "\        -------------------------------------------------"<< endl;
@@ -294,7 +294,7 @@ void usuario::insertarAdministrador()
             cout << "          |___|    Redireccionando al inicio....    |___|"<< endl;
             cout << "          |___|                                     |___|"<< endl;
             cout << "         (_____)-----------------------------------(_____)"<< endl;
-                return;
+        return;
         case 6:
         system("cls");
 	    bitacora bit;
@@ -410,6 +410,7 @@ void usuario::menuTrabajador()
     	do
     	{
     		insertarTrabajador();
+    		system("cls");
     		cout << "          __^__                                     __^__"<< endl;
             cout << "         ( ___ )===================================( ___ )"<< endl;
             cout << "          | / |                                     | / |"<< endl;
@@ -446,7 +447,7 @@ void usuario::menuTrabajador()
         cout << "          |___|    Redireccionando al inicio....    |___|"<< endl;
         cout << "          |___|                                     |___|"<< endl;
         cout << "         (_____)-----------------------------------(_____)"<< endl;
-                break;
+                return;
 	case 7:
 	    system("cls");
 	    bitacora bit;
@@ -494,9 +495,10 @@ void usuario::insertarTrabajador()
 	cout << "\t\t  Ingrese enfermedad C/E/G/F(Dolor de cabeza, Dolor de estomago, Dolor de garganta, Fiebre ): ";
 	cin >> enfermedad;
     system("cls");
-    cout << "=============================================" <<endl;
-    cout << "||      Listo! nuevo paciente agregado     ||" <<endl;
-    cout << "=============================================" <<endl;
+    cout << "            =============================================" <<endl;
+    cout << "            ||      Listo! nuevo paciente agregado     ||" <<endl;
+    cout << "            =============================================" <<endl;
+    system("pause");
 	if (enfermedad=="C")
     {
         enfermedad="Cabeza";
@@ -760,7 +762,7 @@ void usuario::desplegarAdministracion()
     cout << "      RECETA: aspirina o ibuprofeno de 600GM - dosis cada 8 horas       " << endl;
     cout << "          Si el dolor sigue o aumenta, por favor ir a un medico         " << endl;
     cout << "========================================================================" << endl;
-    cout << "ID             NOMBRE        APELLIDO        DPI       TELEFONO         " << endl;
+    cout << "ID             NOMBRE         APELLIDO          DPI         TELEFONO         " << endl;
     cout << "========================================================================" << endl;
 	file.open("Cabeza.txt",ios::in);
 	if(!file)
@@ -805,7 +807,7 @@ void usuario::desplegarVentas()
     cout << "        RECETA: Guaifenesina, pastillas con mentol/miel o vicks         " << endl;
     cout << "   Posible infeccion, inicios de fiebre o cambio de voz (en infantes)   " << endl;
     cout << "========================================================================" << endl;
-    cout << "ID             NOMBRE        APELLIDO        DPI       TELEFONO         " << endl;
+    cout << "ID             NOMBRE         APELLIDO         DPI         TELEFONO         " << endl;
     cout << "========================================================================" << endl;
 	file.open("Garganta.txt",ios::in);
 	if(!file)
@@ -850,7 +852,7 @@ void usuario::desplegarContabilidad()
     cout << " RECETA: Antidiarreicos , Líquidos rehidratantes o una sertal cada 12 horas " << endl;
     cout << "       Posible indigestion, inicios de empacho, gastritis o reflujo         " << endl;
     cout << "============================================================================" << endl;
-    cout << "ID             NOMBRE        APELLIDO        DPI       TELEFONO         " << endl;
+    cout << "ID             NOMBRE         APELLIDO         DPI          TELEFONO         " << endl;
     cout << "=============================================================================" << endl;
 	file.open("Estomago.txt",ios::in);
 	if(!file)
@@ -943,7 +945,8 @@ void usuario::menuDepartamentos()
     cout << "                 | 2. Dolor de Garganta          |"<< endl;
     cout << "                 | 3. Dolor deEstomago           |"<< endl;
     cout << "                 | 4. Fiebre Leve                |"<< endl;
-    cout << "                 | 5. Salir del sistema          |"<< endl;
+    cout << "                 | 5. Regresar                   |"<< endl;
+    cout << "                 | 6. Salir del sistema          |"<< endl;
     cout << "                 |                               |"<< endl;
     cout << "                 |      Ingresa una Opcion       |"<< endl;
     cout << "                 |                               |"<< endl;
@@ -964,7 +967,17 @@ void usuario::menuDepartamentos()
         case 4:
             desplegarRecepcion();
             break;
-        case 5:
+         case 5:
+            cout << "\t\t\tNombre Administrador: " << nameAdministrador << endl;
+            cout << "" << endl;
+            cout << "          __^__                                     __^__"<< endl;
+            cout << "         ( ___ )-----------------------------------( ___ )"<< endl;
+            cout << "          | / |                                     | / |"<< endl;
+            cout << "          | / |              REGRESANDO...          | / |"<< endl;
+            cout << "          |___|                                     |___|"<< endl;
+            cout << "         (_____)-----------------------------------(_____)"<< endl;
+            return;
+        case 6:
             system("cls");
             bitacora bit;
             codigo="7999";

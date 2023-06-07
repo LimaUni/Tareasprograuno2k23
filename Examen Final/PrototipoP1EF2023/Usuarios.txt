@@ -1,1 +1,7 @@
         
+1              JAVIER         LIMA           156465465      4656466        Cabeza         
+2              MARIA          LOLO           56465465       45646          Estomago       
+3              JULIO          ORTEGA         123456789      12345678       Garganta       
+4              MARIO          AQUI           123456987      12345678       Fiebre         
+5              LILIAN         LUNA           12346577       3685244        Cabeza         
+6              ERICK          LUNMA          45454564154    3565565        Estomago       
